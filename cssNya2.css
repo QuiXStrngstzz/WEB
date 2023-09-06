@@ -1,0 +1,74 @@
+/* styles.css */
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: black;
+    overflow: hidden;
+}
+
+.card {
+    position: relative;
+    width: 600px;
+    height: 300px;
+    display: flex;
+    background: linear-gradient(45deg, #d33341, #010171);
+    border-radius: 20px;
+}
+
+.card img {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 300px;
+    transition: height 0.5s, left 0.5s;
+    z-index: 1;
+}
+
+.card:hover img {
+    height: 450px;
+    left: 90%;
+}
+
+.content {
+    position: relative;
+    width: 40%;
+    left: 20%;
+    color: #fff;
+    text-transform: capitalize;
+    transition: left 0.5s, opacity 0.5s;
+    opacity: 0;
+    z-index: 2;
+    padding: 10px;
+    margin-left: -50%; /* Add a negative margin to move the content to the right */
+}
+
+.card:hover .content {
+    left: 50%; /* Reset the left property on hover to move it back to the center */
+    opacity: 1;
+}
+
+h2 {
+    margin: 0;
+    padding: 0;
+    font-size: 24px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+p {
+    margin-bottom: 20px;
+}
+
+a {
+    position: relative;
+    display: inline-block;
+    color: #111;
+    padding: 5px 10px;
+    background: #fff;
+    text-decoration: none;
+    border-radius: 10px;
+}
